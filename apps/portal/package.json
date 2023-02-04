@@ -1,0 +1,13 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo build",
+    "test": "echo test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

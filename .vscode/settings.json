@@ -1,0 +1,9 @@
+{
+    "files.autoSave": "off",
+    "editor.tabSize": 4,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "files.exclude": {
+        "**/.turbo": true
+    }
+}
