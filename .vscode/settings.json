@@ -4,6 +4,7 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 100,
     "files.exclude": {
-        "**/.turbo": true
+        "**/.turbo": true,
+        "**/node_modules": true
     }
 }
