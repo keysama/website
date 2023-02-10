@@ -12,4 +12,4 @@ I will be very honored if you submit a PR to me, and I will invite you to join m
 
 I will respond to discussions about any issues
 
-Your Star will mean a lot to me, kindly thank you for reading this document and your support
+Your Star will mean a lot to me, kindly thank you for reading this document and your support !
