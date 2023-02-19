@@ -1,0 +1,22 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "server": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chatgpt": "^4.5.0",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-chat-elements": "^12.0.8",
+    "react-chatbot-kit": "^2.1.2",
+    "react-dom": "^18.2.0"
+  }
+}
