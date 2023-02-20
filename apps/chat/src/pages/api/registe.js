@@ -2,7 +2,7 @@ const fs = require('fs');
 const path =require('path');
 const { initFile } = require('../../utils/file');
 
-const userFile = path.resolve(__dirname, '..', '..', '..', '..','data', 'users.json');
+const userFile = path.resolve(__dirname, 'users.json');
 
 function guid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
