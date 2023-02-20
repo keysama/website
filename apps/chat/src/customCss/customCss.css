@@ -66,8 +66,18 @@ body {
  .my-title-container{
     position: relative;
     margin-bottom: 40px;
+    margin-top: 20px;
     text-align: center;
  }
+
+.my-menu-list{
+    background: #474747;
+    z-index: 10;
+    position: relative;
+}
+.my-menu-list-item{
+    padding: 5px 25px;
+}
 
 .my-title-animate{
     position: absolute;
@@ -98,6 +108,13 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+.my-menu{
+   position: absolute; 
+   top: 20px;
+   left: 20px;
+   color: white;
+   cursor: pointer;
 }
 
 .reset-button{
