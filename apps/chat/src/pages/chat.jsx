@@ -1,4 +1,5 @@
 import Chatbot from '../components/Chatbot';
+import { Meun } from '../components/menu/menu';
 import { useEffect } from 'react';
 
 function guid() {
@@ -18,7 +19,8 @@ function HomePage() {
 
     return (
         <>
-            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh", width: '100%', flexDirection: 'column' }}>
+            <div className='home-container'>
+                <Meun/>
                 <div className='my-title-container'>
                     <div className='my-title-animate'>ChatGpt Demo</div>
                     <div className='my-title'>ChatGpt Demo</div>
