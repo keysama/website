@@ -142,6 +142,12 @@ body {
     .my-title-animate, .my-title{
         font-size: 60px;
     }
+    .my-menu-list-pc{
+        display: none;
+    }
+    .my-menu-title{
+        display: block;
+    }
   }
 
 @media only screen and (min-width: 640px) {
@@ -151,6 +157,12 @@ body {
     }
     .react-chatbot-kit-chat-message-container {
         height: 50vh;
+    }
+    .my-menu-list-pc{
+        display: flex;
+    }
+    .my-menu-title{
+        display: none;
     }
   }
 .react-chatbot-kit-chat-bot-message{
