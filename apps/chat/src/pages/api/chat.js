@@ -5,8 +5,7 @@ console.log("process.env.API_KEYS", process.env.API_KEYS)
 const apiKeys = JSON.parse(process.env.API_KEYS)
 
 const api = new ChatGPTAPI({
-  apiKey: apiKeys[0],
-  maxModelTokens: 500
+  apiKey: apiKeys[0]
 });
 
 const waitings = new Set();
