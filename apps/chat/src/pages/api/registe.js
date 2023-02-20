@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path =require('path');
+const { initFile } = require('../../utils/file');
 
 const userFile = path.resolve(__dirname, '..', '..', '..', '..','data', 'users.json');
 
@@ -11,6 +12,7 @@ function guid() {
 }
 
 export default async function handler(req, res) {
+    await initFile(userFile, '[]')
 
     const { nickname,email,password } = req.body;
 
