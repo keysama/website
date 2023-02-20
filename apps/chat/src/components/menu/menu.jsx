@@ -3,7 +3,19 @@ import * as React from 'react';
 export function Meun(){
    
    const [isOpen, setIsOpen] = React.useState(false);
-    return <div className='my-menu'>
+   const menuRef = React.useRef(null);
+
+   React.useEffect(() => {
+    if(document){
+       document.addEventListener('click', (e) => {
+         if(!menuRef.current.contains(e.target)){
+            setIsOpen(false); 
+         }
+       });
+    }
+   }, []);
+
+    return <div className='my-menu' ref={menuRef}>
         <div onClick={() => {
             setIsOpen(!isOpen);
         }}>Meun</div>
