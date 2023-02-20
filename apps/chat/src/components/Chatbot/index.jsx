@@ -19,7 +19,7 @@ function MyChatbot() {
   return (
     <Chatbot
       config={config}
-      headerText="May Queen Nyan-Nyan"
+      headerText={<div className='message-header'><div>May Queen Nyan-Nyan</div><button className='reset-button'>Reset</button></div>}
       messageParser={MessageParser}
       actionProvider={ActionProvider}
       validator={(props) => {
