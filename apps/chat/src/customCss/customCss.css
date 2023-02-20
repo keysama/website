@@ -66,7 +66,7 @@ body {
  .my-title-container{
     position: relative;
     margin-bottom: 40px;
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
  }
 
@@ -111,10 +111,15 @@ body {
 }
 .my-menu{
    position: absolute; 
-   top: 20px;
+   top: 10px;
    left: 20px;
    color: white;
    cursor: pointer;
+}
+
+.my-menu-title{
+    cursor: pointer;
+    padding: 10px;
 }
 
 .reset-button{
@@ -135,7 +140,7 @@ body {
         height: 70vh;
     }
     .my-title-animate, .my-title{
-        font-size: 70px;
+        font-size: 60px;
     }
   }
 

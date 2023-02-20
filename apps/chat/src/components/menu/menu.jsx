@@ -16,7 +16,7 @@ export function Meun(){
    }, []);
 
     return <div className='my-menu' ref={menuRef}>
-        <div onClick={() => {
+        <div className='my-menu-title' onClick={() => {
             setIsOpen(!isOpen);
         }}>Meun</div>
         <div className='my-menu-list' style={{display: isOpen? 'block': 'none'}}>
