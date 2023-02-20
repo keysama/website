@@ -1,9 +1,11 @@
 import { ChatGPTAPI } from 'chatgpt';
 
+console.log("process.env.API_KEYS", process.env.API_KEYS)
+
 const apiKeys = JSON.parse(process.env.API_KEYS)
 
 const api = new ChatGPTAPI({
-  apiKey: apiKeys[1],
+  apiKey: apiKeys[0],
   maxModelTokens: 500
 });
 

@@ -18,7 +18,12 @@ function HomePage() {
 
     return (
         <>
-            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh" }}>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh", width: '100%', flexDirection: 'column' }}>
+                <div className='my-title-container'>
+                    <div className='my-title-animate'>ChatGpt Demo</div>
+                    <div className='my-title'>ChatGpt Demo</div>
+                </div>
+                
                 <Chatbot />
             </div>
             <div style={{textAlign:"center", color:"#adadad", fontSize:"12px"}}>
