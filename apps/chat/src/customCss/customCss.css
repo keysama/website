@@ -107,6 +107,7 @@ body {
 @media only screen and (min-width: 640px) {
     .react-chatbot-kit-chat-container {
         width: 80vw;
+        max-width: 800px;
     }
     .react-chatbot-kit-chat-message-container {
         height: 50vh;
