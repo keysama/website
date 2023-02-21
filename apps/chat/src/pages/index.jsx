@@ -1,6 +1,7 @@
 import Chatbot from '../components/Chatbot';
 import { Meun } from '../components/menu/menu';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom'
 import Head from 'next/head'
 
 function guid() {
@@ -18,12 +19,23 @@ function HomePage() {
         // }
     }, [])
 
+    const [isViewTips, setIsViewTips] = useState(false);
+
+    function handleOnTouchMove(e){
+       setIsViewTips(true);
+    }
+
+    function handleOnTouchEnd(){
+        setIsViewTips(false);
+    }
+
     return (
         <>
            <Head>
            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
            </Head>
-            <div className='home-container'>
+           <div className='clear-message' style={{display: isViewTips? 'block': 'none'}}>Loose will clear message</div>
+            <div className='home-container' onTouchMove={handleOnTouchMove} onTouchEnd={handleOnTouchEnd}>
                 <Meun/>
                 <div className='my-title-container'>
                     <div className='my-title-animate'>ChatGpt Demo</div>
