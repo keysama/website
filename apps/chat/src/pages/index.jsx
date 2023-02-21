@@ -1,6 +1,7 @@
 import Chatbot from '../components/Chatbot';
 import { Meun } from '../components/menu/menu';
 import { useEffect } from 'react';
+import Head from 'next/head'
 
 function guid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -19,6 +20,9 @@ function HomePage() {
 
     return (
         <>
+           <Head>
+           <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+           </Head>
             <div className='home-container'>
                 <Meun/>
                 <div className='my-title-container'>
