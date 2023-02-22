@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "server": "next start"
+    "server": "next start -p 3010"
   },
   "keywords": [],
   "author": "",

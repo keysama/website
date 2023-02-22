@@ -19,9 +19,10 @@ function HomePage() {
             localStorage.setItem('sessionId', guid())
         }
 
-        const uid = localStorage.getItem('uid');
+        let uid = localStorage.getItem('uid');
         if (!uid) {
-            localStorage.setItem('uid', guid())
+            uid = guid();
+            localStorage.setItem('uid',uid)
         }
 
         const socketClient = io("/", {
