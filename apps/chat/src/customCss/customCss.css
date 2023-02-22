@@ -1,8 +1,15 @@
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     background-color: rgb(0, 0, 0);
-    height: 100vh;
-    overflow: hidden;
+    width: 100vw;
+    overflow-x: hidden;
+}
+#__next {
+    width: 100%;
 }
 
 .home-container {
@@ -148,6 +155,9 @@ body {
     .my-menu-title{
         display: block;
     }
+    .reset-button{
+        display: none;
+    }
   }
 
 @media only screen and (min-width: 640px) {
@@ -166,7 +176,7 @@ body {
     }
   }
 .react-chatbot-kit-chat-bot-message{
-    width: auto
+    width: max-content
 }
 
 .react-chatbot-kit-chat-inner-container{
@@ -178,6 +188,19 @@ body {
 }
 .react-chatbot-kit-chat-btn-send{
     background-image: linear-gradient(90deg,rgb(121, 40, 202),rgb(255, 0, 128));
+}
+
+.clear-message {
+    position: absolute;
+    top: 400px;
+    left: calc(50% - 108px);
+    color: white;
+    background: #000000;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow:2px 1px 8px 1px rgb(160 160 160);
+    /* background-image: linear-gradient(90deg,rgb(121, 40, 202),rgb(255, 0, 128)); */
 }
 
 
