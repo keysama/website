@@ -59,7 +59,7 @@ function HomePage() {
             <div style={{textAlign:"center", color:"#adadad", fontSize:"12px"}}>
                 这是一个chatGPT的demo，由于经费有限，连续对话太多或刷新网页可能会导致她忘了您哦~
             </div>
-            <div style={{width: '100%', height: '100px'}}/>
+            <div style={{width: '100%', height: '70px'}}/>
         </>
     );
 }

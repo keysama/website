@@ -192,7 +192,7 @@ body {
 
 .clear-message {
     position: absolute;
-    top: 160px;
+    top: 400px;
     left: calc(50% - 108px);
     color: white;
     background: #000000;
