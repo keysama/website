@@ -1,6 +1,7 @@
 import Chatbot from '../components/Chatbot';
 import { Meun } from '../components/menu/menu';
 import { useEffect } from 'react';
+import { io } from "socket.io-client";
 
 function guid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -11,10 +12,31 @@ function guid() {
 
 function HomePage() {
     useEffect(() => {
-        // const sessionId = localStorage.getItem('sessionId');
-        // if (sessionId) {
+        const sessionId = localStorage.getItem('sessionId');
+        if (!sessionId) {
             localStorage.setItem('sessionId', guid())
-        // }
+        }
+
+        const uid = localStorage.getItem('uid');
+        if (!uid) {
+            localStorage.setItem('uid', guid())
+        }
+
+        const socketClient = io("/", {
+            path: "/api/socketio",
+               // transports: ["websocket"],
+        });
+
+        socketClient.emit("join", {uid});
+
+        socketClient.on("connect", () => {
+            console.log("socket 连接成功");
+        });
+
+        socketClient.on("new_topic", (data) => {
+            console.log("new_topic", data.text);
+        });
+
     }, [])
 
     return (
