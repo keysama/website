@@ -21,12 +21,24 @@ function HomePage() {
 
     const [isViewTips, setIsViewTips] = useState(false);
 
+    const startPonit = useRef();
+    const endPonit = useRef();
+
     function handleOnTouchMove(e){
-       setIsViewTips(true);
+       if(startPonit.current - e.changedTouches[0].clientY >= 100){
+          setIsViewTips(true);
+       }
     }
 
-    function handleOnTouchEnd(){
+    function handleOnTouchEnd(e){
+        // console.log('handleOnTouchEnd', e.changedTouches[0].clientY);
+        endPonit.current = e.changedTouches[0].clientY;
         setIsViewTips(false);
+    }
+
+    function handleOnTouchStart(e){
+        startPonit.current = e.changedTouches[0].clientY;
+        // console.log('handleOnTouchStart', e.changedTouches[0].clientY);
     }
 
     return (
@@ -35,7 +47,7 @@ function HomePage() {
            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
            </Head>
            <div className='clear-message' style={{display: isViewTips? 'block': 'none'}}>Loose will clear message</div>
-            <div className='home-container' onTouchMove={handleOnTouchMove} onTouchEnd={handleOnTouchEnd}>
+            <div className='home-container' onTouchStart={handleOnTouchStart} onTouchMove={handleOnTouchMove} onTouchEnd={handleOnTouchEnd}>
                 <Meun/>
                 <div className='my-title-container'>
                     <div className='my-title-animate'>ChatGpt Demo</div>
@@ -47,6 +59,7 @@ function HomePage() {
             <div style={{textAlign:"center", color:"#adadad", fontSize:"12px"}}>
                 这是一个chatGPT的demo，由于经费有限，连续对话太多或刷新网页可能会导致她忘了您哦~
             </div>
+            <div style={{width: '100%', height: '100px'}}/>
         </>
     );
 }
