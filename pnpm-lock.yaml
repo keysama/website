@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 importers:
 
@@ -44,9 +44,9 @@ importers:
     dependencies:
       axios: 1.3.3
       chatgpt: 4.5.0
-      next: 13.1.6_biqbaboplfbrettd7655fr4n2y
+      next: 13.1.6_react-dom@18.2.0+react@18.2.0
       react: 18.2.0
-      react-chat-elements: 12.0.8_biqbaboplfbrettd7655fr4n2y
+      react-chat-elements: 12.0.8_react-dom@18.2.0+react@18.2.0
       react-chatbot-kit: 2.1.2
       react-dom: 18.2.0_react@18.2.0
       socket.io: 4.6.1
@@ -122,7 +122,6 @@ packages:
       pacote: 13.6.2
       semver: 7.3.8
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -153,7 +152,6 @@ packages:
       p-waterfall: 2.1.1
       semver: 7.3.8
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -291,7 +289,6 @@ packages:
       validate-npm-package-name: 4.0.0
       yargs-parser: 20.2.4
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -490,7 +487,6 @@ packages:
       npm-registry-fetch: 13.3.1
       npmlog: 6.0.2
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -520,7 +516,6 @@ packages:
       pify: 5.0.0
       read-package-json: 5.0.2
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -559,7 +554,6 @@ packages:
       npmlog: 6.0.2
       tar: 6.1.13
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -659,7 +653,6 @@ packages:
       pacote: 13.6.2
       semver: 7.3.8
     transitivePeerDependencies:
-      - bluebird
       - encoding
       - nx
       - supports-color
@@ -708,7 +701,6 @@ packages:
       npmlog: 6.0.2
       p-queue: 6.6.2
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -817,7 +809,6 @@ packages:
       slash: 3.0.0
       write-json-file: 4.3.0
     transitivePeerDependencies:
-      - bluebird
       - encoding
       - nx
       - supports-color
@@ -1014,7 +1005,6 @@ packages:
       treeverse: 2.0.0
       walk-up-path: 1.0.0
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -1039,8 +1029,6 @@ packages:
       promise-retry: 2.0.1
       semver: 7.3.8
       which: 2.0.2
-    transitivePeerDependencies:
-      - bluebird
     dev: true
 
   /@npmcli/installed-package-contents/1.0.7:
@@ -1071,7 +1059,6 @@ packages:
       pacote: 13.6.2
       semver: 7.3.8
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -1117,7 +1104,6 @@ packages:
       read-package-json-fast: 2.0.3
       which: 2.0.2
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -1644,8 +1630,6 @@ packages:
       ssri: 9.0.1
       tar: 6.1.13
       unique-filename: 2.0.1
-    transitivePeerDependencies:
-      - bluebird
     dev: true
 
   /callsites/3.1.0:
@@ -1924,8 +1908,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      JSONStream: 1.3.5
       is-text-path: 1.0.1
+      JSONStream: 1.3.5
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -3004,7 +2988,6 @@ packages:
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
-      - bluebird
       - debug
       - encoding
       - supports-color
@@ -3019,7 +3002,6 @@ packages:
       npm-package-arg: 9.1.2
       npm-registry-fetch: 13.3.1
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -3033,7 +3015,6 @@ packages:
       semver: 7.3.8
       ssri: 9.0.1
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -3156,7 +3137,6 @@ packages:
       socks-proxy-agent: 7.0.0
       ssri: 9.0.1
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -3378,50 +3358,6 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next/13.1.6_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-hHlbhKPj9pW+Cymvfzc15lvhaOZ54l+8sXDXJWm3OBNBzgrVj6hwGPmqqsXg40xO1Leq+kXpllzRPuncpC0Phw==}
-    engines: {node: '>=14.6.0'}
-    hasBin: true
-    peerDependencies:
-      fibers: '>= 3.1.0'
-      node-sass: ^6.0.0 || ^7.0.0
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      sass: ^1.3.0
-    peerDependenciesMeta:
-      fibers:
-        optional: true
-      node-sass:
-        optional: true
-      sass:
-        optional: true
-    dependencies:
-      '@next/env': 13.1.6
-      '@swc/helpers': 0.4.14
-      caniuse-lite: 1.0.30001450
-      postcss: 8.4.14
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      styled-jsx: 5.1.1_react@18.2.0
-    optionalDependencies:
-      '@next/swc-android-arm-eabi': 13.1.6
-      '@next/swc-android-arm64': 13.1.6
-      '@next/swc-darwin-arm64': 13.1.6
-      '@next/swc-darwin-x64': 13.1.6
-      '@next/swc-freebsd-x64': 13.1.6
-      '@next/swc-linux-arm-gnueabihf': 13.1.6
-      '@next/swc-linux-arm64-gnu': 13.1.6
-      '@next/swc-linux-arm64-musl': 13.1.6
-      '@next/swc-linux-x64-gnu': 13.1.6
-      '@next/swc-linux-x64-musl': 13.1.6
-      '@next/swc-win32-arm64-msvc': 13.1.6
-      '@next/swc-win32-ia32-msvc': 13.1.6
-      '@next/swc-win32-x64-msvc': 13.1.6
-    transitivePeerDependencies:
-      - '@babel/core'
-      - babel-plugin-macros
-    dev: false
-
   /next/13.1.6_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-hHlbhKPj9pW+Cymvfzc15lvhaOZ54l+8sXDXJWm3OBNBzgrVj6hwGPmqqsXg40xO1Leq+kXpllzRPuncpC0Phw==}
     engines: {node: '>=14.6.0'}
@@ -3503,7 +3439,6 @@ packages:
       tar: 6.1.13
       which: 2.0.2
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -3633,7 +3568,6 @@ packages:
       npm-package-arg: 9.1.2
       proc-log: 2.0.1
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -3872,7 +3806,6 @@ packages:
       ssri: 9.0.1
       tar: 6.1.13
     transitivePeerDependencies:
-      - bluebird
       - supports-color
     dev: true
 
@@ -4028,11 +3961,6 @@ packages:
 
   /promise-inflight/1.0.1:
     resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
     dev: true
 
   /promise-retry/2.0.1:
@@ -4087,7 +4015,7 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /react-chat-elements/12.0.8_biqbaboplfbrettd7655fr4n2y:
+  /react-chat-elements/12.0.8_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-wAQ974rL1zHGp12kjafsQDaEp/MK9wHSX1s6V5HR1f0uB3eBQmqi/y02Vu4wDPDScXrjbdV1nC+8eHCWsAqj0g==}
     peerDependencies:
       react: ^17.0.2

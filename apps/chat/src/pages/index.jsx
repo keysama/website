@@ -72,17 +72,16 @@ function HomePage() {
            <div className='clear-message' style={{display: isViewTips? 'block': 'none'}}>Loose will clear message</div>
             <div className='home-container' onTouchStart={handleOnTouchStart} onTouchMove={handleOnTouchMove} onTouchEnd={handleOnTouchEnd}>
                 <Meun/>
-                <div className='my-title-container'>
+                {/* <div className='my-title-container'>
                     <div className='my-title-animate'>ChatGpt Demo</div>
                     <div className='my-title'>ChatGpt Demo</div>
-                </div>
+                </div> */}
                 
                 <Chatbot />
             </div>
-            <div style={{textAlign:"center", color:"#adadad", fontSize:"12px"}}>
+            <div className='my-tips'>
                 这是一个chatGPT的demo，由于经费有限，连续对话太多或刷新网页可能会导致她忘了您哦~
             </div>
-            <div style={{width: '100%', height: '70px'}}/>
         </>
     );
 }

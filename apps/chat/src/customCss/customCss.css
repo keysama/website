@@ -107,8 +107,8 @@ body {
 }
 
 .react-chatbot-kit-chat-message-container{
-    background: #b3b3b3;
-    height: calc(100% - 80px);
+    background: #767676;
+    height: 100%;
 }
 .message-header{
   display: flex;
@@ -144,7 +144,7 @@ body {
 @media only screen and (max-width: 639px) {
     .react-chatbot-kit-chat-container {
         width: 80vw;
-        height: 70vh;
+        height: 80vh;
     }
     .my-title-animate, .my-title{
         font-size: 60px;
@@ -158,15 +158,18 @@ body {
     .reset-button{
         display: none;
     }
+    .react-chatbot-kit-chat-input-container{
+       bottom: -80px;
+    }
   }
 
 @media only screen and (min-width: 640px) {
     .react-chatbot-kit-chat-container {
         width: 80vw;
-        max-width: 800px;
+        max-width: 1000px;
     }
     .react-chatbot-kit-chat-message-container {
-        height: 50vh;
+        height: 75vh;
     }
     .my-menu-list-pc{
         display: flex;
@@ -201,6 +204,14 @@ body {
     z-index: 1000;
     box-shadow:2px 1px 8px 1px rgb(160 160 160);
     /* background-image: linear-gradient(90deg,rgb(121, 40, 202),rgb(255, 0, 128)); */
+}
+
+.my-tips{
+  text-align:center;
+  color:#adadad; 
+  font-size:12px;
+  margin: 20px auto;
+  width: 60%;
 }
 
 
