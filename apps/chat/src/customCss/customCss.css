@@ -109,6 +109,8 @@ body {
 .react-chatbot-kit-chat-message-container{
     background: #767676;
     height: 100%;
+    padding: 0px 17.5px 10px 17.5px;
+    margin-top: 40px;
 }
 .message-header{
   display: flex;
@@ -143,8 +145,8 @@ body {
 
 @media only screen and (max-width: 639px) {
     .react-chatbot-kit-chat-container {
-        width: 80vw;
-        height: 80vh;
+        width: 100vw;
+        height: 100vh;
     }
     .my-title-animate, .my-title{
         font-size: 60px;
@@ -159,7 +161,13 @@ body {
         display: none;
     }
     .react-chatbot-kit-chat-input-container{
-       bottom: -80px;
+        position: fixed;
+        bottom: 55px;
+    }
+    .react-chatbot-kit-chat-header{
+        position: fixed;
+        top: 0;
+        width: 100vw;
     }
   }
 
@@ -179,7 +187,8 @@ body {
     }
   }
 .react-chatbot-kit-chat-bot-message{
-    width: max-content
+    width: max-content;
+    margin-left: unset;
 }
 
 .react-chatbot-kit-chat-inner-container{
@@ -187,7 +196,7 @@ body {
    height: 100%;
 }
 .react-chatbot-kit-chat-container {
-
+  overflow: hidden;
 }
 .react-chatbot-kit-chat-btn-send{
     background-image: linear-gradient(90deg,rgb(121, 40, 202),rgb(255, 0, 128));
