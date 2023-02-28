@@ -1,3 +1,10 @@
+// const httpServer = res.socket.server;
+// const io = new ServerIO(httpServer, {
+//     path: "/api/socketio",
+// });
+// global.socketIo = io;
+
+
 module.exports = {
     trailingSlash: false,
     module:{

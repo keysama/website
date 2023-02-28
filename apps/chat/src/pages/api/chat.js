@@ -1,5 +1,41 @@
 import { ChatGPTUnofficialProxyAPI } from 'chatgpt';
 
+function mock(request, opts){
+  const {conversationId, parentMessageId, onProgress} = opts;
+  const text = '菲利斯喵喵，秋叶原最棒的女仆咖啡店哦～服务周到，可爱程度满分，超能力模式开启！就是这么一只超级可爱的猫娘，我是菲利斯喵喵！';
+    return new Promise(resolve => {
+      let index = 0;
+      let flag = setInterval(() => {
+        if(index >= 20){
+          clearInterval(flag);
+          return resolve({
+            id: parentMessageId, 
+            conversationId: conversationId,
+            text:  text.substring[0,index]
+          }) 
+        }
+        onProgress({
+          text: text.substring(0,index)
+        })
+        index += 3;
+      }, 200)
+    })
+}
+
+// const result = await api.sendMessage(text, {
+//   // promptPrefix,
+//   conversationId: conversationId || undefined,
+//   parentMessageId: messageId || undefined,
+//   onProgress: (partialResponse) => {
+//     const currentText = partialResponse.text.substring(offset);
+//     const len = currentText.length;
+//     console.log(currentText);
+//     res.write(currentText);
+//     offset+= len;
+//   }
+// });
+
+
 let apiKeys = ['eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJrZXlzYW1hNjY5QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJnZW9pcF9jb3VudHJ5IjoiTFQifSwiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS9hdXRoIjp7InVzZXJfaWQiOiJ1c2VyLUtvRHZFaXNMY1BYdlduQkVCb0NPNzFXWiJ9LCJpc3MiOiJodHRwczovL2F1dGgwLm9wZW5haS5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTQ0MDU3Nzk1OTM2MzgyMjI4MDUiLCJhdWQiOlsiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS92MSIsImh0dHBzOi8vb3BlbmFpLm9wZW5haS5hdXRoMGFwcC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNjc2NzE5Mjg4LCJleHAiOjE2Nzc5Mjg4ODgsImF6cCI6IlRkSkljYmUxNldvVEh0Tjk1bnl5d2g1RTR5T282SXRHIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCBtb2RlbC5yZWFkIG1vZGVsLnJlcXVlc3Qgb3JnYW5pemF0aW9uLnJlYWQgb2ZmbGluZV9hY2Nlc3MifQ.oYRpnttyxbsEC4oAu89JQs5v-4d4ETKux21XTF-BJ7DEEFHQyozS82GBBJMKXrE2D67t7ITkrO2j56yETvHIfWNud_itBy_DcSgMqPSvUd9ArIANTxlxAGOKtzKZngolRRke8jEhS4gSGQoO02_EsWtwJVJlOG6pq6sNMTFuG3rRYdvaG5iESQAYKentyQyW0nmthggtA8aCYestIgqJR1_YztIqgRAPuIrQj9wuaj_HIWwoNY_wYm_QPUoLTP3Yz2-0slk7wMIwIqARgNMlPprNftlBnu9GRsWjryr_hM5CfQLRuTJnHH8I9I_4BQLNptS5gCeDf__Ou4eJVLNxtg'];
 
 try {
@@ -26,7 +62,7 @@ export default async function handler(req, res) {
   }
 
   const { text, sessionId, conversationId, messageId, uid } = req.body;
-  const io = res.socket?.server?.io || null;
+  res.setHeader('Content-type', 'application/octet-stream');
 
   if (waitings.has(sessionId)) {
     return res.status(200).json({
@@ -58,27 +94,50 @@ export default async function handler(req, res) {
     messageId
   )
 
-  io.sockets.in(uid).emit('new_topic', { text: '<waiting>' })
-  const result = await api.sendMessage(text, {
-    // promptPrefix,
-    conversationId: conversationId || undefined,
-    parentMessageId: messageId || undefined,
-    onProgress: (partialResponse) => {
-      io.sockets.in(uid).emit('new_topic', { text: partialResponse.text });
+  res.write('🔨');
+  let offset = 0;
+  let result = null;
+
+  try{
+    result = await api.sendMessage(text, {
+      // const result = await mock(text, {
+        // promptPrefix,
+        conversationId: conversationId || undefined,
+        parentMessageId: messageId || undefined,
+        onProgress: (partialResponse) => {
+          const currentText = partialResponse.text.substring(offset);
+          const len = currentText.length;
+          res.write(currentText);
+          offset+= len;
+        }
+      });
+  }catch(e){
+    res.write('非常抱歉，由于网络原因，这条对话未能完成，一条对话我们可以当作无事发生，您可以继续对话');
+    result = {
+      id: messageId,
+      conversationId: conversationId,
+      text: '非常抱歉，由于网络原因，这条对话未能完成，一条对话我们可以当作无事发生，您可以继续对话'
     }
-  });
-  io.sockets.in(uid).emit('new_topic', { text: '<end>' });
+  }
+  
+  res.write('🪐');
 
   const { id: newMessageId, conversationId: newConversationId } = result;
 
   console.log(sessionId, result.text);
 
-  waitings.delete(sessionId)
+  waitings.delete(sessionId);
 
-  return res.status(200).json({
+  console.log({
+    sessionId: sessionId,
+    conversationId: newConversationId,
+    messageId: newMessageId
+  })
+
+  res.end(JSON.stringify({
     result: result.text,
     sessionId: sessionId,
     conversationId: newConversationId,
     messageId: newMessageId
-  });
+  }));
 }

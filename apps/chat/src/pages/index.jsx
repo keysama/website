@@ -1,7 +1,5 @@
 import { Meun } from '../components/menu/menu';
-import { io } from "socket.io-client";
 import { useEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom'
 import Head from 'next/head'
 
 
@@ -25,22 +23,6 @@ function HomePage() {
             uid = guid();
             localStorage.setItem('uid',uid)
         }
-
-        const socketClient = io("/", {
-            path: "/api/socketio",
-               // transports: ["websocket"],
-        });
-
-        socketClient.emit("join", {uid});
-
-        socketClient.on("connect", () => {
-            console.log("socket 连接成功");
-        });
-
-        socketClient.on("new_topic", (data) => {
-            console.log("new_topic", data.text);
-        });
-
     }, [])
 
     const [isViewTips, setIsViewTips] = useState(false);
