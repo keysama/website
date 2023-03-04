@@ -23,6 +23,7 @@ export default function MyApp({ Component, pageProps }) {
            <TabbarItem tabTitle="登录" icon="add" />
            <TabbarItem tabTitle="注册" icon="edit" />
            <TabbarItem tabTitle="聊天" icon="dongdong"></TabbarItem>
+           {/* <Link href="/chatBot"><TabbarItem tabTitle="聊天" icon="dongdong"></TabbarItem></Link> */}
            <TabbarItem tabTitle="我的" icon="my" />
        </Tabbar>
     </>
