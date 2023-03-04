@@ -35,6 +35,10 @@ body {
     }
 }
 
+.tabbar{
+  box-shadow: 4px 4px 4px 4px #00000040 !important;
+}
+
 .react-chatbot-kit-chat-input {
     width: 100%;
     padding: 12.5px;
@@ -162,12 +166,14 @@ body {
     }
     .react-chatbot-kit-chat-input-container{
         position: fixed;
-        bottom: 55px;
+        bottom: 50px;
     }
     .react-chatbot-kit-chat-header{
         position: fixed;
         top: 0;
         width: 100vw;
+        z-index: 10000;
+        box-shadow: 0 4px 4px 0 #00000040;
     }
   }
 
