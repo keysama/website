@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "0.0.1",
+  "version": "0.0.1-local.1",
   "description": "",
   "author": "",
   "private": true,
@@ -11,7 +11,7 @@
     "predev": "cd ../.. && pnpm turbo build --filter=api^...",
     "prebuild": "cd ../.. && pnpm turbo build --filter=api^...",
     "server": "node dist/main",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",    
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "dev:debug": "nest start --debug --watch",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
@@ -21,7 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@keysama/constant": "workspace:^1.0.0",
+    "@keysama/constant": "workspace:^0.0.1-local.1",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
@@ -30,7 +30,7 @@
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
-    "@keysama/config": "workspace:^1.0.0",
+    "@keysama/config": "workspace:^0.0.1-local.1",
     "@nestjs/cli": "^9.0.0",
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",

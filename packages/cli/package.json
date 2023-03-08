@@ -1,6 +1,6 @@
 {
   "name": "@keysama/cli",
-  "version": "0.0.1-local.0",
+  "version": "0.0.1-local.1",
   "description": "",
   "main": "index.js",
   "scripts": {

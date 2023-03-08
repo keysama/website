@@ -1,6 +1,6 @@
 {
   "name": "chat",
-  "version": "0.0.1-local.0",
+  "version": "0.0.1-local.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@keysama/config": "workspace:^1.0.0",
-    "@keysama/constant": "workspace:^1.0.0",
+    "@keysama/config": "workspace:^0.0.1-local.1",
+    "@keysama/constant": "workspace:^0.0.1-local.1",
     "@nutui/nutui-react": "^1.4.8",
     "axios": "^1.3.3",
     "chatgpt": "^4.5.0",

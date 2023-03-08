@@ -1,6 +1,6 @@
 {
   "name": "@keysama/constant",
-  "version": "1.0.0",
+  "version": "0.0.1-local.1",
   "description": "",
   "author": "",
   "repository": "transitive-bullshit/chatgpt-api",
@@ -28,7 +28,6 @@
     "build": "tsup",
     "predev": "cd ../.. && pnpm turbo build --filter=@keysama/constant^...",
     "prebuild": "cd ../.. && pnpm turbo build --filter=@keysama/constant^..."
-   
   },
   "devDependencies": {
     "tsup": "^6.6.3",
@@ -37,6 +36,6 @@
   "lint-staged": {},
   "keywords": [],
   "dependencies": {
-    "@keysama/config": "workspace:^1.0.0"
+    "@keysama/config": "workspace:^0.0.1-local.1"
   }
 }
