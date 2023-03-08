@@ -1,10 +1,11 @@
 {
-  "name": "blog",
+  "name": "@keysama/cli",
   "version": "0.0.1-local.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo build",
+    "test": "echo test"
   },
   "keywords": [],
   "author": "",
