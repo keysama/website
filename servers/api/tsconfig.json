@@ -1,0 +1,11 @@
+{
+  "extends": "@keysama/config/tsconfig.server.json",
+  "root": true,
+  "compilerOptions": {
+    "outDir": "./build",
+    "baseUrl": "./",
+    "typeRoots": [
+      "./typings"
+    ],
+  },
+}

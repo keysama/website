@@ -5,20 +5,19 @@
   "description": "keysama.com",
   "main": "index.js",
   "scripts": {
-    "build": "turbo run build",
+    "build": "echo root build",
+    "bootstrap": "turbo run build --filter='./packages/*'",
+    "turbo": "turbo",
     "release:local": "lerna version prerelease --preid local --no-push",
     "release:canary": "lerna version prerelease --preid canary --no-push",
     "release":"lerna version --no-push",
-    "test": "turbo test"
+    "test": "turbo run build --filter=chat --dry"
   },
   "keywords": [
     "react", "monorepo", "keysama"
   ],
   "author": "keysama@669@gmail.com",
   "license": "ISC",
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "lerna": "^6.4.1",
     "turbo": "^1.7.3"

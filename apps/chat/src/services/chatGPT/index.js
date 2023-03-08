@@ -1,6 +1,5 @@
 import axios from 'axios';
-export const START_SIGN = '🔨';
-export const END_SIGN = '🪐';
+import { START_SIGN, END_SIGN } from '@keysama/constant';
 
 function defaultHandle(value) {
     console.log("value:", value)
@@ -75,7 +74,7 @@ export async function sendMessage(message, handle = defaultHandle) {
     let res = null;
 
     try {
-        await axios.post('/api/chat', {
+        await axios.post('http://localhost:3000/chat', {
             text: message,
             sessionId: sessionId,
             messageId: messageId,

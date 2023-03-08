@@ -1,5 +1,5 @@
 import { ChatGPTUnofficialProxyAPI } from 'chatgpt';
-import { START_SIGN, END_SIGN } from '../../services/chatGPT';
+import { START_SIGN, END_SIGN} from '@keysama/constant';
 
 const message_busy = '非常抱歉，由于网络原因，这条对话未能完成，这条对话我们可以当作无事发生，您可以继续对话';
 const message_pendding = '我正在努力回复您，请不要着急喵～';

@@ -2,9 +2,9 @@
     "files.autoSave": "off",
     "editor.tabSize": 4,
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100,
+    "editor.wordWrapColumn": 140,
     "files.exclude": {
         "**/.turbo": true,
-        "**/node_modules": true
+        // "**/node_modules": true
     }
 }
