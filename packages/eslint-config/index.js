@@ -1,4 +1,3 @@
-console.log('=====keysama-eslint======');
 module.exports = {
     extends: [
         'airbnb-base',

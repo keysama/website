@@ -1,17 +1,21 @@
 {
-  "files.autoSave": "onFocusChange",
-  "files.exclude": {
-    "**/.turbo": true
-    // "**/node_modules": true
-  },
-  "eslint.format.enable": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
-  // Set the default
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/.turbo": true,
+        "**/node_modules": true
+    },
+    "eslint.format.enable": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    // Set the default
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.compactFolders": false,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    }
 }
