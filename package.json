@@ -1,25 +1,28 @@
 {
-  "private": true,
-  "name": "keysama_website",
-  "version": "1.0.0",
-  "description": "keysama.com",
-  "main": "index.js",
-  "scripts": {
-    "build": "echo root build",
-    "bootstrap": "turbo run build --filter='./packages/*'",
-    "turbo": "turbo",
-    "release:local": "lerna version prerelease --preid local --no-push",
-    "release:canary": "lerna version prerelease --preid canary --no-push",
-    "release":"lerna version --no-push",
-    "test": "turbo run build --filter=chat --dry"
-  },
-  "keywords": [
-    "react", "monorepo", "keysama"
-  ],
-  "author": "keysama@669@gmail.com",
-  "license": "ISC",
-  "devDependencies": {
-    "lerna": "^6.4.1",
-    "turbo": "^1.7.3"
-  }
+    "private": true,
+    "name": "keysama_website",
+    "version": "1.0.0",
+    "description": "keysama.com",
+    "main": "index.js",
+    "scripts": {
+        "build": "echo root build",
+        "bootstrap": "turbo run build --filter='./packages/*'",
+        "turbo": "turbo",
+        "release:local": "lerna version prerelease --preid local --no-push",
+        "release:canary": "lerna version prerelease --preid canary --no-push",
+        "release": "lerna version --no-push",
+        "test": "turbo run build --filter=chat --dry"
+    },
+    "keywords": [
+        "react",
+        "monorepo",
+        "keysama"
+    ],
+    "author": "keysama@669@gmail.com",
+    "license": "ISC",
+    "devDependencies": {
+        "@keysama/eslint-config": "workspace:^1.0.0",
+        "lerna": "^6.4.1",
+        "turbo": "^1.7.3"
+    }
 }

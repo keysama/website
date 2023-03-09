@@ -1,14 +1,14 @@
 {
-  "name": "@keysama/config",
-  "version": "0.0.1-local.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo build",
-    "compile": "echo compile"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "@keysama/config",
+    "version": "0.0.1-local.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "echo build",
+        "compile": "echo compile"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }
