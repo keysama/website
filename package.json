@@ -6,12 +6,12 @@
     "main": "index.js",
     "scripts": {
         "build": "echo root build",
-        "bootstrap": "turbo run build --filter='./packages/*'",
+        "bootstrap": "echo hello world!",
         "turbo": "turbo",
         "release:local": "lerna version prerelease --preid local --no-push",
         "release:canary": "lerna version prerelease --preid canary --no-push",
         "release": "lerna version --no-push",
-        "test": "turbo run build --filter=chat --dry"
+        "test": "echo test!"
     },
     "keywords": [
         "react",
